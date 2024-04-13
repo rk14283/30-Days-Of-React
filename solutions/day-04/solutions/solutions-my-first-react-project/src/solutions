@@ -1,0 +1,213 @@
+Solution 1:
+
+index.js 
+import React from "react";
+import ReactDOM from "react-dom";
+import imageCSS from "./css_logo.png"; // Import the image using a relative path
+import imageHTML from "./html_logo.png"; // Import the image using a relative path
+import imageJS from "./js_logo.png"; // Import the image using a relative path
+import imageReact from "./react_logo.png"; // Import the image using a relative path
+
+const title = "Front End Technologies";
+const headerStyle = {
+  padding: "20px",
+};
+
+const headerWrapperStyle = {
+  display: "flex",
+  alignItems: "center" /* Vertically center items */,
+  justifyContent: "center" /* Horizontally center items */,
+};
+const titleStyle = {
+  textAlign: "center",
+};
+const rootElementStyle = {
+  backgroundColor: "#F3F0F5", // Background color of the whole page
+  minHeight: "100vh", // Ensure the root element takes up the full viewport height
+};
+
+const logoStyle = {
+  width: "100px",
+  height: "100px",
+  margin: "10px", // Add some space between the logos
+};
+
+const header = (
+  <header style={headerStyle}>
+    <h1 style={titleStyle}>{title}</h1>
+    <div className="header-wrapper" style={headerWrapperStyle}>
+      <div>
+        <img src={imageCSS} alt="css logo image" style={logoStyle} />
+      </div>
+      <div>
+        <img src={imageHTML} alt="html logo image" style={logoStyle} />
+      </div>
+      <div>
+        <img src={imageJS} alt="js logo image" style={logoStyle} />
+      </div>
+      <div>
+        <img src={imageReact} alt="react logo image" style={logoStyle} />
+      </div>
+    </div>
+  </header>
+);
+
+const rootElement = document.getElementById("root");
+// JSX element, app
+const app = (
+  <div className="app" style={rootElementStyle}>
+    <div>{header}</div>
+  </div>
+);
+
+// we render the JSX element using the ReactDOM package
+ReactDOM.render(app, rootElement);
+
+
+
+index.html 
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <title>30 Days Of React App</title>
+  </head>
+  <body>
+    <!--This is being grabbed in index.js-->
+    <!--This is the basics, and you can get back to it-->
+    <div id="root"></div>
+  </body>
+</html>
+
+Solution 1:
+
+index.js 
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+const title = "Subscribe";
+const subTitle = "Sign up with your email address to recieve news and updates";
+const headerStyle = {
+  padding: "20px",
+};
+const headerWrapperStyle = {
+  display: "flex",
+  alignItems: "center", // Vertically center items
+  justifyContent: "center", // Horizontally center items
+  flexDirection: "column", // Stack items vertically
+  marginBottom: "20px", // Add some space between title and subtitle
+};
+
+const titleStyle = {
+  textAlign: "center",
+  fontSize: "24px", // Larger font size for the title
+  fontWeight: "bold", // Bold font weight for the title
+  color: "#333", // Darker shade of black
+};
+
+const subTitleStyle = {
+  textAlign: "center",
+  color: "#555", // Slightly lighter shade of black
+  fontSize: "18px", // Larger font size for the subtitle
+  marginTop: "10px", // Add some space between title and subtitle
+};
+
+const inputStyle = {
+  padding: "10px",
+  margin: "5px",
+  borderRadius: "5px",
+  border: "1px solid #ccc",
+};
+const rootElementStyle = {
+  backgroundColor: "#61DBFB", // Background color of the whole page
+  minHeight: "100vh", // Ensure the root element takes up the full viewport height
+};
+const buttonStyle = {
+  backgroundColor: "#FFB6C1", // Light pink color
+  padding: "10px 20px",
+  borderRadius: "5px",
+  border: "none",
+  cursor: "pointer",
+  fontSize: "16px",
+};
+const header = (
+  <header style={headerStyle}>
+    <h1 style={titleStyle}>{title}</h1>
+    <h2 style={subTitleStyle}>{subTitle}</h2>
+    <div className="header-wrapper" style={headerWrapperStyle}></div>
+  </header>
+);
+const inputs = (
+  <div style={{ display: "flex", justifyContent: "center" }}>
+    <input type="text" placeholder="First Name" style={inputStyle} />
+    <input type="text" placeholder="Last Name" style={inputStyle} />
+    <input type="text" placeholder="Email" style={inputStyle} />
+  </div>
+);
+
+const button = (
+  <div style={{ display: "flex", justifyContent: "center" }}>
+    <button style={buttonStyle}> Subscribe </button>
+  </div>
+);
+const rootElement = document.getElementById("root");
+// JSX element, app
+const app = (
+  <div className="app" style={rootElementStyle}>
+    <div>{header}</div>
+    <div>{inputs}</div>
+    <div>{button}</div>
+  </div>
+);
+
+// we render the JSX element using the ReactDOM package
+ReactDOM.render(app, rootElement);
+
+
+index.html 
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <title>30 Days Of React App Solutions</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!--This is being grabbed in index.js-->
+    <!--This is the basics, and you can get back to it-->
+    <div id="root"></div>
+  </body>
+</html>
+
+
+
+
+
